@@ -1,0 +1,65 @@
+body {
+    padding: 2%;
+    font-family: Ubuntu;
+}
+
+h2 {
+    color: #006bb5;
+    text-decoration: underline;
+    margin-bottom: 3.5%;
+}
+
+h4 {
+    background-color: #808284;
+    color: white;
+    padding: .5%;
+}
+
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+
+.clientTable {
+    
+}
+
+.hoursCell {
+    width: 10%;    
+}
+
+.hoursField {
+    width: 50%;
+}
+
+.intakeField {
+    width: 80%;
+}
+
+.clientSection {
+    display: inline-block;
+    margin-top: 2.5%;
+}
+
+#addClientButton {
+    float: right;
+    background-color: #006bb5;
+    border: none;
+    color: white;
+    padding: 1%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: inherit;
+    transition: .5s;
+}
+
+#addClientButton:hover {
+    background-color: #808284;
+}
+
+#updateButton {
+    margin-top: 2.5%;
+    float:right;
+}

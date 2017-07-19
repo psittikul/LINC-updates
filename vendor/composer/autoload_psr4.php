@@ -6,4 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Google\\Cloud\\Samples\\Bookshelf\\' => array($baseDir . '/src', $baseDir . '/test/lib'),
 );

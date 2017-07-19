@@ -62,14 +62,23 @@ function addCTClient() {
     newCell10Content.name = "statusSeptember".concat(numberRows.toString());
     newCell10Content.removeAttribute("id");
     newCell10.appendChild(newCell10Content);
-    
+
 };
 
-function updateClientInfo() {
-    var table=document.getElementById("CT_Client_Table");
-    for (var i = 0, row; row = table.rows[i]; i++) {
-        for (var j = 0, col; col = row.cells[j]; j++) {
-            col.innerHTML.value = col.innerHTML.value;
-        }
-    }
+function updateStatusColor(activeCell) {
+    var activeCellId = activeCell.id;
+    var status = document.getElementById(activeCellId);
+    switch (status) {
+        case "Active":
+            activeCell.closest("td").setAttribute("background-color: green;");
+            break;
+        case "Deferred":
+            activeCell.closest("td").setAttribute("background-color: orange;");
+            break;
+        case "Closing":
+            activeCell.closest("td").setAttribute("background-color: red;");
+            break;
+        default:
+            console.log("Default case");
+                  }
 };

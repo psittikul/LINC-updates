@@ -6,6 +6,21 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit599273be855a3a01f48d2a47c1afb1e5
 {
+    public static $prefixLengthsPsr4 = array (
+        'G' => 
+        array (
+            'Google\\Cloud\\Samples\\Bookshelf\\' => 31,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'Google\\Cloud\\Samples\\Bookshelf\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
+            1 => __DIR__ . '/../..' . '/test/lib',
+        ),
+    );
+
     public static $prefixesPsr0 = array (
         'M' => 
         array (
@@ -19,6 +34,8 @@ class ComposerStaticInit599273be855a3a01f48d2a47c1afb1e5
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
+            $loader->prefixLengthsPsr4 = ComposerStaticInit599273be855a3a01f48d2a47c1afb1e5::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit599273be855a3a01f48d2a47c1afb1e5::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit599273be855a3a01f48d2a47c1afb1e5::$prefixesPsr0;
 
         }, null, ClassLoader::class);
